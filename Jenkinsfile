@@ -15,12 +15,12 @@ pipeline {
       parallel {
         stage('test1') {
           steps {
-            sh 'sh "python3 ./fibo.py --count 2"'
+            sh 'python3 ./fibo.py --count 2'
           }
         }
         stage('test2') {
           steps {
-            sh 'sh "python3 ./fibo.py --count 4"'
+            sh 'python3 ./fibo.py --count 4'
           }
         }
         stage('test3') {
