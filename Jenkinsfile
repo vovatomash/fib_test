@@ -23,7 +23,7 @@ pipeline {
     }
     stage('done') {
       steps {
-        echo 'done'
+        sh 'ls -la'
       }
     }
   }
