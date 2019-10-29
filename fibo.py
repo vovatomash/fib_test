@@ -17,12 +17,10 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-
 def main_generator():
     f = fiboyield()
     for x in range(60):
         print("fibonacci: {}".format(f.next()))
-
 
 # GENERATOR
 def fiboyield():
