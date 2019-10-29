@@ -1,9 +1,29 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'general-slave'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
+      parallel {
+        stage('test1') {
+          steps {
+            echo 'aaa'
+          }
+        }
+        stage('test2') {
+          steps {
+            sleep 3
+            echo 'sleep'
+          }
+        }
+      }
+    }
+    stage('done') {
       steps {
-        echo 'aaa'
+        echo 'done'
       }
     }
   }
