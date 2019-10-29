@@ -7,7 +7,7 @@ import time
 import argparse
 
 
-def fibonacci(n):
+def fibonacci_a(n):
     if n < 2:
         return n
     else:
@@ -15,7 +15,7 @@ def fibonacci(n):
 
 def main_recursive(max_iter_number):
     for x in range(max_iter_number):
-        print("fibonacci({}) = {}".format(x, str(fibonacci(x))))
+        print("fibonacci({}) = {}".format(x, str(fibonacci_a(x))))
 
 def main_generator():
     f = fiboyield()
