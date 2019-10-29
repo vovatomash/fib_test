@@ -11,8 +11,6 @@ def main_recursive(max_iter_number):
     for x in range(max_iter_number):
         print("fibonacci({}) = {}".format(x, fibonacci(x)))
 
-
-# RECURSIVE
 def fibonacci(n):
     if n < 2:
         return n
@@ -23,7 +21,7 @@ def fibonacci(n):
 def main_generator():
     f = fiboyield()
     for x in range(60):
-        print("fibonacci: {}".format(f.next())
+        print("fibonacci: {}".format(f.next()))
 
 
 # GENERATOR
