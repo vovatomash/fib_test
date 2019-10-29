@@ -7,24 +7,20 @@ import time
 import argparse
 
 
-def main_recursive(max_iter_number):
-    for x in range(max_iter_number):
-        print("fibonacci({} -- 12) = {}".format(x, fibonacci(x))
-
-
-# RECURSIVE
 def fibonacci(n):
     if n < 2:
         return n
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
+def main_recursive(max_iter_number):
+    for x in range(max_iter_number):
+        print("fibonacci({}) = {}".format(x, str(fibonacci(x))))
 
 def main_generator():
     f = fiboyield()
     for x in range(60):
-        print("fibonacci: {}".format(f.next())
-
+        print("fibonacci: {}".format(f.next()))
 
 # GENERATOR
 def fiboyield():
@@ -46,4 +42,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     start_time = time.time()
     main_recursive(args.fib_count + 31)
-    print time.time() - start_time, "seconds"
+    print(time.time() - start_time, "seconds")
