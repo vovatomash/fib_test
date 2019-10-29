@@ -25,7 +25,7 @@ pipeline {
         }
         stage('test3') {
           steps {
-            sh 'sh "python3 ./fibo.py --count 5"'
+            sh 'ls -la && sh "python3 ./fibo.py --count 5"'
           }
         }
         stage('bo-t1 start') {
