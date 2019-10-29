@@ -9,7 +9,7 @@ import argparse
 
 def main_recursive(max_iter_number):
     for x in range(max_iter_number):
-        print("fibonacci({} -- 1) = {}".format(x, fibonacci(x))
+        print("fibonacci({} -- 2) = {}".format(x, fibonacci(x))
 
 
 # RECURSIVE
