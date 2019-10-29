@@ -23,7 +23,7 @@ def fibonacci(n):
 def main_generator():
     f = fiboyield()
     for x in range(60):
-        print "fibonacci: %d" % f.next()
+        print("fibonacci: {}".format(f.next())
 
 
 # GENERATOR
