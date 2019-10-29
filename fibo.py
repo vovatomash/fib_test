@@ -9,7 +9,7 @@ import argparse
 
 def main_recursive(max_iter_number):
     for x in range(max_iter_number):
-        print("fibonacci({} -- 13) = {}".format(x, fibonacci(x))
+        print("fibonacci({}) = {}".format(x, fibonacci(x))
 
 
 # RECURSIVE
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     start_time = time.time()
     main_recursive(args.fib_count + 31)
-    print time.time() - start_time, "seconds"
+    print(time.time() - start_time, "seconds")
