@@ -38,6 +38,11 @@ pipeline {
             build(job: 'bo-t2', propagate: true, wait: true)
           }
         }
+        stage('aaa') {
+          steps {
+            sh 'ls -la'
+          }
+        }
       }
     }
     stage('done') {
