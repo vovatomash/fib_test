@@ -6,6 +6,11 @@ pipeline {
 
   }
   stages {
+    stage('Archive art') {
+      steps {
+        archiveArtifacts(artifacts: '*', fingerprint: true)
+      }
+    }
     stage('test1') {
       parallel {
         stage('test1') {
@@ -23,12 +28,12 @@ pipeline {
             sh 'sh "python3 ./fibo.py --count 5"'
           }
         }
-        stage('run bo-t1') {
+        stage('bo-t1 start') {
           steps {
             build(job: 'bo-t1', propagate: true, wait: true)
           }
         }
-        stage('run bo-t2') {
+        stage('bo-t2 start') {
           steps {
             build(job: 'bo-t2', propagate: true, wait: true)
           }
@@ -37,7 +42,15 @@ pipeline {
     }
     stage('done') {
       steps {
-        sh 'ls -la'
+        timestamps() {
+          sh 'ls -la'
+        }
+
+      }
+    }
+    stage('deploy') {
+      steps {
+        sh 'echo "done"'
       }
     }
   }
