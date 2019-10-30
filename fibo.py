@@ -42,4 +42,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     start_time = time.time()
     main_recursive(args.fib_count + 31)
-    print(time.time() - start_time, "seconds =-= ")
+    print(time.time() - start_time, "seconds = ")
